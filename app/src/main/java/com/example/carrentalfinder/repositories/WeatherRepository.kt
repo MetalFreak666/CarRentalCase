@@ -7,7 +7,6 @@ import com.example.carrentalfinder.data.api.RetrofitService
  */
 class WeatherRepository {
 
-    suspend fun getWeather(city: String) {
-        RetrofitService.openWeatherAPI.getWeather(city)
-    }
+    suspend fun getWeather(city: String) = RetrofitService.openWeatherAPI.getWeather()
+
 }

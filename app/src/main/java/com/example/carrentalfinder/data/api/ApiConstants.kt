@@ -5,7 +5,7 @@ package com.example.carrentalfinder.data.api
  */
 class ApiConstants {
     companion object {
-        const val API_KEY = "f25f50afbde90c058326b42390470c63"
+        const val API_KEY = "33ecaa6ec00009e67bb7bb65bbda6aba"
         const val BASE_URL = "https://api.openweathermap.org/"
     }
 }

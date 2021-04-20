@@ -13,11 +13,11 @@ import retrofit2.http.Query
 interface OpenWeatherApi {
 
     //Used to getting current weather from city
-    @GET("data/2.5/weather?")
+    @GET("https://api.openweathermap.org/data/2.5/weather")
     suspend fun getWeather(
-        @Query("city name")
-        city: String,
+        @Query("q")
+        city: String = "reykjavik",
         @Query("appid")
-        apiKey: String = API_KEY
+        app_id: String = API_KEY
     ): Response<WeatherResponse>
 }
