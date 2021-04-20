@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/recycler_car_brand_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_item_brand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/recycler_car_model_txt"/>
+    
+    <TextView
+        android:id="@+id/recycler_car_model_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_item_model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/recycler_car_brand_txt"/>
+
+    <TextView
+        android:id="@+id/recycler_car_year_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_item_year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_car_model_txt"/>
+
+    <TextView
+        android:id="@+id/recycler_rental_price_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_item_price"
+        app:layout_constraintTop_toBottomOf="@id/recycler_car_year_txt"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
