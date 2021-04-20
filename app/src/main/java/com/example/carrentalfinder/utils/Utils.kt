@@ -18,3 +18,4 @@ fun getJsonDataFromAssets(context: Context, fileName: String): String? {
     }
     return jsonString
 }
+

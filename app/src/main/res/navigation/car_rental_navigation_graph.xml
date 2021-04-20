@@ -2,10 +2,26 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/car_rental_navigation_graph"
-    app:startDestination="@id/searchOffersFragment">
+    app:startDestination="@id/rentalOffersFragment">
 
     <fragment
         android:id="@+id/searchOffersFragment"
         android:name="com.example.carrentalfinder.ui.fragments.SearchRentalOfferFragment"
         android:label="SearchOffersFragment" />
+    <fragment
+        android:id="@+id/rentalDetailFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.RentalDetailFragment"
+        android:label="RentalDetailFragment" >
+        <argument
+            android:name="rentalOffer"
+            app:argType="com.example.carrentalfinder.data.models.RentalOffer" />
+    </fragment>
+    <fragment
+        android:id="@+id/rentalOffersFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.RentalOffersFragment"
+        android:label="RentalOffersFragment" >
+        <action
+            android:id="@+id/action_rentalOffersFragment_to_rentalDetailFragment"
+            app:destination="@id/rentalDetailFragment" />
+    </fragment>
 </navigation>

@@ -17,6 +17,8 @@ interface OpenWeatherApi {
     suspend fun getWeather(
         @Query("q")
         city: String,
+        @Query("units")
+        units: String = "metric",
         @Query("appid")
         app_id: String = API_KEY
     ): Response<WeatherResponse>

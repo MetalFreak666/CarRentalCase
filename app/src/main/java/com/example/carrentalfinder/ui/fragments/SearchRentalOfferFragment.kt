@@ -20,23 +20,7 @@ class SearchRentalOfferFragment : Fragment(R.layout.fragment_search_offer) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as CarRentalActivity).carRentalViewModel
 
-        viewModel.currentWeather.observe(viewLifecycleOwner, { response ->
-            when(response) {
-                is Resource.Success -> {
-                    response.data?.let { currentWeather ->
-                        Timber.i("GG $currentWeather")
-                    }
-                }
-                is Resource.Loading -> {
-                    Timber.i("Loading weather data")
-                }
-                is Resource.Error -> {
-                    response.message?.let { errorMessage ->
-                        Timber.d("Error: $errorMessage")
-                    }
-                }
-            }
-        })
+
 
         val gson = Gson()
         val jsonFileString = getJsonDataFromAssets(this.requireContext(), "cars.json")

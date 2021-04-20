@@ -1,8 +1,25 @@
 <resources>
     <!-- App Name -->
     <string name="app_name">CarRentalFinder</string>
-    
-    <!-- Rental offer recycler item -->
+
+    <!-- Navigation Menu -->
+    <string name="nav_menu_rental_offers">Rental offers</string>
+    <string name="nav_menu_search_rental_car">Search for Car</string>
+
+    <!-- Rental Offers Fragment -->
+    <string name="rental_offers_location">Location</string>
+    <string name="rental_offers_temperature">Temperature</string>
+    <string name="rental_offers_wind_condition">Wind</string>
+
+    <!-- Rental Offer Detail Fragment -->
+    <string name="rental_detail_car_brand">Brand</string>
+    <string name="rental_detail_car_model">Model</string>
+    <string name="rental_detail_year">Year</string>
+    <string name="rental_detail_horsepower">Horsepower</string>
+    <string name="rental_detail_car_weight">Weight</string>
+    <string name="rental_detail_price">Price</string>
+
+    <!-- Rental Offer RecyclerItem -->
     <string name="recycler_item_brand">Brand</string>
     <string name="recycler_item_model">Model</string>
     <string name="recycler_item_year">Year</string>

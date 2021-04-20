@@ -10,5 +10,6 @@ data class WeatherResponse (
     val base: String,
     val main: Main,
     val visibility: Int,
-    val wind: Wind
+    val wind: Wind,
+    val name: String
     )
