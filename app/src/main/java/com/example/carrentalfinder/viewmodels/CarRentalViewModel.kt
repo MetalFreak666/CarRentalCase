@@ -39,10 +39,16 @@ class CarRentalViewModel(private val repository: WeatherRepository) : ViewModel(
         return Resource.Error(response.message())
     }
 
+    /**
+     * Public method used to update selected rental car
+     */
     fun updateCar(car: Car) {
         selectedRentalBrand.value = car
     }
 
+    /**
+     * Public method used to update selected rental car color
+     */
     fun updateRentalCarColor(color: String) {
         selectedRentalCarColor.value = color
     }

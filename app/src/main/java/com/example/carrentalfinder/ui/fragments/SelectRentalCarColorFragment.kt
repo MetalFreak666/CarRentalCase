@@ -28,6 +28,7 @@ class SelectRentalCarColorFragment : Fragment(R.layout.fragment_select_rental_ca
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as CarRentalActivity).carRentalViewModel
 
+        //Using NumberPicker widget to display colors
         colorPicker = view.findViewById(R.id.select_rental_color_picker)
         colorPicker.maxValue = colors.toTypedArray().size - 1
         colorPicker.displayedValues = colors.toTypedArray()

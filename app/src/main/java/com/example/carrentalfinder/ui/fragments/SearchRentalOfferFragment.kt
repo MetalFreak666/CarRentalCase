@@ -83,6 +83,7 @@ class SearchRentalOfferFragment : Fragment(R.layout.fragment_search_offer) {
         }
     }
 
+    //Method used to update UI with selected color
     private fun updateRentalColor(color: String) {
         search_rental_color_add.isVisible = false
         search_rental_current_color_txt.text = color

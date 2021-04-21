@@ -16,7 +16,6 @@ import com.example.carrentalfinder.viewmodels.CarRentalViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.fragment_select_rental_car.*
-import timber.log.Timber
 
 /**
  * Fragment used to selection of rental car
@@ -55,12 +54,14 @@ class SelectRentalCarFragment : Fragment(R.layout.fragment_select_rental_car) {
         select_rental_car_recycler.apply {
             adapter = rentalCarsAdapter
             layoutManager = LinearLayoutManager(activity)
+
+            //Adding spacing decorator between items in RecyclerView
             val spacingDecorator = DividerItemDecoration(context, ClipDrawable.HORIZONTAL)
             addItemDecoration(spacingDecorator)
         }
-
     }
 
+    //Method used to submit rental cars into RentalCarsAdapter class
     private fun submitRentalCars(rentalCars: List<Car>) {
         rentalCarsAdapter.submitRentalCars(rentalCars)
     }

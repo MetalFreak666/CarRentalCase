@@ -6,13 +6,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.carrentalfinder.R
-import com.example.carrentalfinder.data.models.Car
 import com.example.carrentalfinder.repositories.WeatherRepository
-import com.example.carrentalfinder.utils.getJsonDataFromAssets
 import com.example.carrentalfinder.viewmodels.CarRentalViewModel
 import com.example.carrentalfinder.viewmodels.CarRentalViewModelProvider
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_car_rental.*
 import timber.log.Timber
 
@@ -34,6 +30,5 @@ class CarRentalActivity : AppCompatActivity() {
         val repository = WeatherRepository()
         val viewModelProvider = CarRentalViewModelProvider(repository)
         carRentalViewModel = ViewModelProvider(this, viewModelProvider).get(CarRentalViewModel::class.java)
-
     }
 }
