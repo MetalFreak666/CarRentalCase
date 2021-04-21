@@ -1,3 +1,48 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">CarRentalFinder</string>
+
+    <!-- Navigation Menu -->
+    <string name="nav_menu_rental_offers">Rental offers</string>
+    <string name="nav_menu_search_rental_car">Search for Car</string>
+    <string name="nav_menu_my_bookings">My bookings</string>
+
+    <!-- Rental Offers Fragment -->
+    <string name="rental_offers_location">Location :</string>
+    <string name="rental_offers_temperature">Temperature in \u2103 :</string>
+    <string name="rental_offers_wind_condition">Wind (km/h) :</string>
+
+    <!-- Rental Offer Detail Fragment -->
+    <string name="rental_detail_car_brand">Brand</string>
+    <string name="rental_detail_car_model">Model</string>
+    <string name="rental_detail_year">Year</string>
+    <string name="rental_detail_horsepower">Horsepower</string>
+    <string name="rental_detail_car_weight">Weight</string>
+    <string name="rental_detail_price">Price</string>
+
+    <!-- Rental Offer RecyclerItem -->
+    <string name="recycler_item_brand">Brand</string>
+    <string name="recycler_item_model">Model</string>
+    <string name="recycler_item_year">Year :</string>
+    <string name="recycler_item_price">Price :</string>
+    <string name="recycler_item_price_symbol">$</string>
+
+    <!-- Search Rental Offer Fragment -->
+    <string name="search_rental_brand_txt">Select Car</string>
+    <string name="search_rental_horsepower_txt">Engine Horsepower :</string>
+    <string name="search_rental_weight_txt">Car Weight :</string>
+    <string name="search_rental_date_txt">Select Rental Date</string>
+    <string name="search_rental_content_description">Add Image</string>
+    <string name="search_rental_total_price">Total Price :</string>
+    <string name="search_rental_select_color_txt">Select Color :</string>
+
+    <!-- Select Rental Cars Fragment -->
+    <string name="select_rental_car_txt">Select one of the available cars for rent</string>
+
+    <!-- Rental Car Recycler Item -->
+    <string name="recycler_rental_car_brand_txt">Car Brand :</string>
+    <string name="recycler_rental_car_model_txt">Car Model :</string>
+    <string name="recycler_rental_horsepower_txt">Engine Horsepower :</string>
+    <string name="recycler_rental_car_weight_txt">Car Weight :</string>
+
 </resources>

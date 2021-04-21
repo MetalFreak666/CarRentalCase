@@ -5,9 +5,11 @@ package com.example.carrentalfinder.data.models
  * Documentation: https://openweathermap.org/current
  */
 data class WeatherResponse (
+    val coord: Coordinates,
     val weather: List<Weather>,
     val base: String,
-    val main: List<Main>,
+    val main: Main,
     val visibility: Int,
-    val wind: List<Wind>
+    val wind: Wind,
+    val name: String
     )

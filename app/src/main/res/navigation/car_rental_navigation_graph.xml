@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/car_rental_navigation_graph"
+    app:startDestination="@id/rentalOffersFragment">
+
+    <fragment
+        android:id="@+id/searchOffersFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.SearchRentalOfferFragment"
+        android:label="SearchOffersFragment" >
+        <action
+            android:id="@+id/action_searchOffersFragment_to_selectRentalCarFragment"
+            app:destination="@id/selectRentalCarFragment" />
+        <action
+            android:id="@+id/action_searchOffersFragment_to_selectRentalCarColor"
+            app:destination="@id/selectRentalCarColor" />
+    </fragment>
+    <fragment
+        android:id="@+id/rentalOffersFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.RentalOffersFragment"
+        android:label="RentalOffersFragment" />
+    <fragment
+        android:id="@+id/myBookingsFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.MyBookingsFragment"
+        android:label="MyBookingsFragment" />
+    <fragment
+        android:id="@+id/selectRentalCarFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.SelectRentalCarFragment"
+        android:label="SelectRentalCarFragment" >
+        <action
+            android:id="@+id/action_selectRentalCarFragment_to_searchOffersFragment"
+            app:destination="@id/searchOffersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectRentalCarColor"
+        android:name="com.example.carrentalfinder.ui.fragments.SelectRentalCarColorFragment"
+        android:label="SelectRentalCarColor" >
+        <action
+            android:id="@+id/action_selectRentalCarColor_to_searchOffersFragment"
+            app:destination="@id/searchOffersFragment" />
+    </fragment>
+</navigation>

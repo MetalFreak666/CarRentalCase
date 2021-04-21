@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary style colors -->
+    <color name="primaryColor">#FF3700B3</color>
+    <color name="primaryLightColor">#FF6200EE</color>
+    <color name="primaryDarkColor">#FF3700B3</color>
+    <color name="accentColor">#FFBB86FC</color>
+    <color name="whiteBackgroundColor">#FFFFFF</color>
+
+    <!-- FAB color style -->
+    <color name="fabColor">#FF9800</color>
 </resources>
