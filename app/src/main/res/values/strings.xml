@@ -26,4 +26,11 @@
     <string name="recycler_item_year">Year</string>
     <string name="recycler_item_price">Price</string>
 
+    <!-- Search Rental Offer Fragment -->
+    <string name="search_rental_brand_txt">Select Car</string>
+    <string name="search_rental_horsepower_txt">Engine Horsepower</string>
+    <string name="search_rental_weight_txt">Car Weight</string>
+    <string name="search_rental_date_txt">Select Rental Date</string>
+    <string name="search_rental_content_description">Add Image</string>
+
 </resources>

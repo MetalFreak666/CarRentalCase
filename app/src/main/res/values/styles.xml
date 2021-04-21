@@ -9,4 +9,20 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <!-- Search Rental Car Layout Style -->
+    <style name="LinearLayoutSearchRentalCar">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!-- Search Rental Car Item divider -->
+    <style name="RentalItemDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#DBD9D8</item>
+    </style>
 </resources>
