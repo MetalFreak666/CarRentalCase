@@ -5,6 +5,7 @@
     <!-- Navigation Menu -->
     <string name="nav_menu_rental_offers">Rental offers</string>
     <string name="nav_menu_search_rental_car">Search for Car</string>
+    <string name="nav_menu_my_bookings">My bookings</string>
 
     <!-- Rental Offers Fragment -->
     <string name="rental_offers_location">Location</string>

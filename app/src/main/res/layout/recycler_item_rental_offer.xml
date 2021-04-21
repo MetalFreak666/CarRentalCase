@@ -8,12 +8,11 @@
 
     <TextView
         android:id="@+id/recycler_car_brand_txt"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/recycler_item_brand"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/recycler_car_model_txt"/>
+        app:layout_constraintTop_toTopOf="parent" />
     
     <TextView
         android:id="@+id/recycler_car_model_txt"
@@ -21,8 +20,7 @@
         android:layout_height="wrap_content"
         android:text="@string/recycler_item_model"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/recycler_car_brand_txt"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/recycler_car_year_txt"

@@ -26,8 +26,8 @@ class RentalOffersAdapter() : RecyclerView.Adapter<RentalOffersAdapter.RentalOff
         val rentalOffer = rentalOffers[position]
 
         holder.itemView.apply {
-            recycler_car_brand_txt.text = rentalOffer.car.brand
-            recycler_car_model_txt.text = rentalOffer.car.model
+            recycler_car_brand_txt.text = rentalOffer.car.brand.toUpperCase()
+            recycler_car_model_txt.text = rentalOffer.car.model.toUpperCase()
             recycler_car_year_txt.text = rentalOffer.car.year
             recycler_rental_price_txt.text = rentalOffer.price.toString()
 

@@ -24,4 +24,8 @@
             android:id="@+id/action_rentalOffersFragment_to_rentalDetailFragment"
             app:destination="@id/rentalDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/myBookingsFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.MyBookingsFragment"
+        android:label="MyBookingsFragment" />
 </navigation>

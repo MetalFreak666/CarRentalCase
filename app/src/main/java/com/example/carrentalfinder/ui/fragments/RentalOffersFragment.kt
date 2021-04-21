@@ -1,9 +1,12 @@
 package com.example.carrentalfinder.ui.fragments
 
+import android.graphics.drawable.ClipDrawable
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carrentalfinder.R
 import com.example.carrentalfinder.data.models.Car
@@ -37,10 +40,12 @@ class RentalOffersFragment : Fragment(R.layout.fragment_rental_offers) {
                     response.data?.let { currentWeather ->
                         getRentalCars()
                         calculatePrice(currentWeather)
+                        rental_offers_progress_bar.isVisible = false
                     }
                 }
                 is Resource.Loading -> {
                     Timber.i("Loading weather data")
+                    rental_offers_progress_bar.isVisible = true
                 }
                 is Resource.Error -> {
                     response.message?.let { errorMessage ->
@@ -98,6 +103,8 @@ class RentalOffersFragment : Fragment(R.layout.fragment_rental_offers) {
         rental_offers_recycler_view.apply {
             adapter = rentalOffersAdapter
             layoutManager = LinearLayoutManager(activity)
+            val spacingDecorator = DividerItemDecoration(context, ClipDrawable.HORIZONTAL)
+            addItemDecoration(spacingDecorator)
         }
     }
 
