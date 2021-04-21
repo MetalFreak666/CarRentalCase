@@ -3,15 +3,11 @@ package com.example.carrentalfinder.ui.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.carrentalfinder.R
-import com.example.carrentalfinder.data.models.Car
 import com.example.carrentalfinder.ui.CarRentalActivity
-import com.example.carrentalfinder.utils.Resource
-import com.example.carrentalfinder.utils.getJsonDataFromAssets
 import com.example.carrentalfinder.viewmodels.CarRentalViewModel
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import timber.log.Timber
+import kotlinx.android.synthetic.main.fragment_search_offer.*
 
 class SearchRentalOfferFragment : Fragment(R.layout.fragment_search_offer) {
     lateinit var viewModel: CarRentalViewModel
@@ -21,14 +17,8 @@ class SearchRentalOfferFragment : Fragment(R.layout.fragment_search_offer) {
         viewModel = (activity as CarRentalActivity).carRentalViewModel
 
 
-
-        val gson = Gson()
-        val jsonFileString = getJsonDataFromAssets(this.requireContext(), "cars.json")
-        Timber.i("GG $jsonFileString")
-
-        val listRentalCars = object : TypeToken<List<Car>>(){}.type
-
-        var rentalCars: List<Car> = gson.fromJson(jsonFileString, listRentalCars)
-        Timber.i("GG2 ${rentalCars[101]}")
+        search_rental_add_brand.setOnClickListener {
+            findNavController().navigate(R.id.action_searchOffersFragment_to_selectBrandFragment)
+        }
     }
 }

@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/searchOffersFragment"
         android:name="com.example.carrentalfinder.ui.fragments.SearchRentalOfferFragment"
-        android:label="SearchOffersFragment" />
+        android:label="SearchOffersFragment" >
+        <action
+            android:id="@+id/action_searchOffersFragment_to_selectBrandFragment"
+            app:destination="@id/selectBrandFragment" />
+    </fragment>
     <fragment
         android:id="@+id/rentalDetailFragment"
         android:name="com.example.carrentalfinder.ui.fragments.RentalDetailFragment"
@@ -28,4 +32,12 @@
         android:id="@+id/myBookingsFragment"
         android:name="com.example.carrentalfinder.ui.fragments.MyBookingsFragment"
         android:label="MyBookingsFragment" />
+    <dialog
+        android:id="@+id/selectBrandFragment"
+        android:name="com.example.carrentalfinder.ui.fragments.SelectBrandFragment"
+        android:label="SelectBrandFragment" >
+        <argument
+            android:name="Cars"
+            app:argType="com.example.carrentalfinder.data.models.Car" />
+    </dialog>
 </navigation>
