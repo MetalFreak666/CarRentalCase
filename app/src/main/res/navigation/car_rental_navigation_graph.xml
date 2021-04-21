@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_searchOffersFragment_to_selectRentalCarFragment"
             app:destination="@id/selectRentalCarFragment" />
+        <action
+            android:id="@+id/action_searchOffersFragment_to_selectRentalCarColor"
+            app:destination="@id/selectRentalCarColor" />
     </fragment>
     <fragment
         android:id="@+id/rentalDetailFragment"
@@ -38,6 +41,14 @@
         android:label="SelectRentalCarFragment" >
         <action
             android:id="@+id/action_selectRentalCarFragment_to_searchOffersFragment"
+            app:destination="@id/searchOffersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectRentalCarColor"
+        android:name="com.example.carrentalfinder.ui.fragments.SelectRentalCarColorFragment"
+        android:label="SelectRentalCarColor" >
+        <action
+            android:id="@+id/action_selectRentalCarColor_to_searchOffersFragment"
             app:destination="@id/searchOffersFragment" />
     </fragment>
 </navigation>

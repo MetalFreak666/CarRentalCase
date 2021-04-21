@@ -3,18 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
     
     <LinearLayout
         android:id="@+id/search_rental_offer_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/rounded_layout_edges"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         style="@style/LinearLayoutSearchRentalCar">
         
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,7 +26,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/search_rental_brand_txt"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextViewSearchRentalCar"/>
 
             <ImageView
                 android:id="@+id/search_rental_add_brand"
@@ -58,7 +58,8 @@
                 android:layout_height="40dp"
                 android:text="@string/search_rental_horsepower_txt"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextViewSearchRentalCar"/>
 
             <TextView
                 android:id="@+id/search_rental_selected_horsepower_txt"
@@ -80,7 +81,8 @@
                 android:layout_height="40dp"
                 android:text="@string/search_rental_weight_txt"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextViewSearchRentalCar"/>
 
             <TextView
                 android:id="@+id/search_rental_selected_weight_txt"
@@ -103,7 +105,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/search_rental_date_txt"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextViewSearchRentalCar"/>
 
             <ImageView
                 android:id="@+id/search_rental_date_add"
@@ -122,12 +125,45 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/search_rental_color_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_rental_select_color_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextViewSearchRentalCar"/>
+
+            <ImageView
+                android:id="@+id/search_rental_color_add"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/add_img"
+                android:contentDescription="@string/search_rental_content_description" />
+
+            <TextView
+                android:id="@+id/search_rental_current_color_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View style="@style/RentalItemDivider"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
                 android:id="@+id/search_rental_price_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/search_rental_total_price"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TextViewSearchRentalCar"/>
 
             <TextView
                 android:id="@+id/search_rental_current_price_txt"
@@ -137,7 +173,5 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

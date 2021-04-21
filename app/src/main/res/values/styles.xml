@@ -19,6 +19,12 @@
         <item name="android:layout_marginBottom">10dp</item>
     </style>
 
+    <!-- Search Rental Car TextView style -->
+    <style name="TextViewSearchRentalCar">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <!-- Search Rental Car Item divider -->
     <style name="RentalItemDivider">
         <item name="android:layout_width">match_parent</item>

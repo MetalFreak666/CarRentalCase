@@ -17,6 +17,7 @@ class CarRentalViewModel(private val repository: WeatherRepository) : ViewModel(
     private val city = "reykjavik"
     val currentWeather: MutableLiveData<Resource<WeatherResponse>> = MutableLiveData()
     val selectedRentalBrand = MutableLiveData<Car>()
+    val selectedRentalCarColor = MutableLiveData<String>()
 
     init {
         getCurrentWeather(city)
@@ -38,8 +39,11 @@ class CarRentalViewModel(private val repository: WeatherRepository) : ViewModel(
         return Resource.Error(response.message())
     }
 
-
     fun updateCar(car: Car) {
         selectedRentalBrand.value = car
+    }
+
+    fun updateRentalCarColor(color: String) {
+        selectedRentalCarColor.value = color
     }
 }

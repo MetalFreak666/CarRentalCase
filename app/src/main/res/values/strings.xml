@@ -33,6 +33,7 @@
     <string name="search_rental_date_txt">Select Rental Date</string>
     <string name="search_rental_content_description">Add Image</string>
     <string name="search_rental_total_price">Total Price :</string>
+    <string name="search_rental_select_color_txt">Select Color :</string>
 
     <!-- Select Rental Cars Fragment -->
     <string name="select_rental_car_txt">Select one of the available cars for rent</string>
