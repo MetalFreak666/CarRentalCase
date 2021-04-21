@@ -8,9 +8,9 @@
     <string name="nav_menu_my_bookings">My bookings</string>
 
     <!-- Rental Offers Fragment -->
-    <string name="rental_offers_location">Location</string>
-    <string name="rental_offers_temperature">Temperature</string>
-    <string name="rental_offers_wind_condition">Wind</string>
+    <string name="rental_offers_location">Location :</string>
+    <string name="rental_offers_temperature">Temperature in \u2103 :</string>
+    <string name="rental_offers_wind_condition">Wind (km/h) :</string>
 
     <!-- Rental Offer Detail Fragment -->
     <string name="rental_detail_car_brand">Brand</string>
@@ -23,8 +23,9 @@
     <!-- Rental Offer RecyclerItem -->
     <string name="recycler_item_brand">Brand</string>
     <string name="recycler_item_model">Model</string>
-    <string name="recycler_item_year">Year</string>
-    <string name="recycler_item_price">Price</string>
+    <string name="recycler_item_year">Year :</string>
+    <string name="recycler_item_price">Price :</string>
+    <string name="recycler_item_price_symbol">$</string>
 
     <!-- Search Rental Offer Fragment -->
     <string name="search_rental_brand_txt">Select Car</string>

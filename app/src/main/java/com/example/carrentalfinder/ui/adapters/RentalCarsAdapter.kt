@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carrentalfinder.R
 import com.example.carrentalfinder.data.models.Car
-import com.example.carrentalfinder.data.models.RentalOffer
 import kotlinx.android.synthetic.main.recycler_item_rental_car.view.*
 
 /**

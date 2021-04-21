@@ -1,5 +1,6 @@
 package com.example.carrentalfinder.ui.fragments
 
+import android.graphics.Paint
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
@@ -73,6 +74,7 @@ class SearchRentalOfferFragment : Fragment(R.layout.fragment_search_offer) {
     private fun updateRentalCar(rentalCar: Car) {
         search_rental_add_brand.isVisible = false
         search_rental_selected_brand_txt.text = rentalCar.brand.toUpperCase()
+        search_rental_selected_brand_txt.paintFlags = search_rental_selected_brand_txt.paintFlags or Paint.UNDERLINE_TEXT_FLAG
         search_rental_selected_horsepower_txt.text = rentalCar.horsepower.toString()
         search_rental_selected_weight_txt.text = rentalCar.weight.toString()
 
@@ -84,6 +86,7 @@ class SearchRentalOfferFragment : Fragment(R.layout.fragment_search_offer) {
     private fun updateRentalColor(color: String) {
         search_rental_color_add.isVisible = false
         search_rental_current_color_txt.text = color
+        search_rental_current_color_txt.paintFlags = search_rental_current_color_txt.paintFlags or Paint.UNDERLINE_TEXT_FLAG
 
         search_rental_current_color_txt.setOnClickListener {
             findNavController().navigate(R.id.action_searchOffersFragment_to_selectRentalCarColor)

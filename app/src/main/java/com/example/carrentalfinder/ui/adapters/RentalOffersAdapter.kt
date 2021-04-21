@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.recycler_item_rental_offer.view.*
 class RentalOffersAdapter() : RecyclerView.Adapter<RentalOffersAdapter.RentalOffersViewHolder>() {
 
     private var rentalOffers: List<RentalOffer> = ArrayList()
-    private var onItemClickListener: ((RentalOffer) -> Unit)? = null
 
     inner class RentalOffersViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -29,12 +28,8 @@ class RentalOffersAdapter() : RecyclerView.Adapter<RentalOffersAdapter.RentalOff
         holder.itemView.apply {
             recycler_car_brand_txt.text = rentalOffer.car.brand.toUpperCase()
             recycler_car_model_txt.text = rentalOffer.car.model.toUpperCase()
-            recycler_car_year_txt.text = rentalOffer.car.year
-            recycler_rental_price_txt.text = rentalOffer.price.toString()
-
-            setOnClickListener{
-                onItemClickListener?.let { it(rentalOffer) }
-            }
+            recycler_car_current_year_txt.text = rentalOffer.car.year
+            recycler_rental_current_price.text = rentalOffer.price.toString()
         }
     }
 
@@ -46,10 +41,5 @@ class RentalOffersAdapter() : RecyclerView.Adapter<RentalOffersAdapter.RentalOff
     fun submitOffers(offers: List<RentalOffer>) {
         rentalOffers = offers
         notifyDataSetChanged()
-    }
-
-    //Called when user selected rental offer from RecyclerView
-    fun setOnClickListener(listener: (RentalOffer) -> Unit) {
-        onItemClickListener = listener
     }
 }

@@ -14,4 +14,7 @@
     <color name="primaryDarkColor">#FF3700B3</color>
     <color name="accentColor">#FFBB86FC</color>
     <color name="whiteBackgroundColor">#FFFFFF</color>
+
+    <!-- FAB color style -->
+    <color name="fabColor">#FF9800</color>
 </resources>

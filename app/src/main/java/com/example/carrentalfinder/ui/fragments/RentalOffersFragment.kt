@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carrentalfinder.R
@@ -38,7 +37,7 @@ class RentalOffersFragment : Fragment(R.layout.fragment_rental_offers) {
             when(response) {
                 is Resource.Success -> {
                     response.data?.let { currentWeather ->
-                        getRentalCars()
+                        displayWeatherConditions(currentWeather)
                         calculatePrice(currentWeather)
                         rental_offers_progress_bar.isVisible = false
                     }
@@ -55,16 +54,8 @@ class RentalOffersFragment : Fragment(R.layout.fragment_rental_offers) {
             }
         })
 
+        getRentalCars()
         setupRecyclerView()
-
-        rentalOffersAdapter.setOnClickListener {
-            val bundle = Bundle().apply {
-                putSerializable("rentalOffer", it)
-            }
-
-            //Using navigation controller to parsing selected rental offer data to the new fragment
-            findNavController().navigate(R.id.action_rentalOffersFragment_to_rentalDetailFragment, bundle)
-        }
     }
 
     //Getting cars from JSON file in assets directory
@@ -76,21 +67,20 @@ class RentalOffersFragment : Fragment(R.layout.fragment_rental_offers) {
         rentalCars = gson.fromJson(jsonFileString, listRentalCars)
     }
 
+    /**
+     * Method used to calculate price based on weather conditions
+     */
     private fun calculatePrice(currentWeather: WeatherResponse) {
-        //Displaying current weather conditions in UI elements
-        rental_offers_location.text = currentWeather.name
-        rental_offers_temperature.text = currentWeather.main.temp.toString()
-        rental_offers_wind_condition.text = currentWeather.wind.speed.toString()
-
-        val basePrice = 200
+        val basePrice = 200.00
         val rentalCarsOffers: MutableList<RentalOffer> = mutableListOf()
 
         for (car in rentalCars) {
-            if (car.year.toInt() > 1975) {
-                val rentalPrice = basePrice + currentWeather.wind.speed + currentWeather.main.temp
+            val rentalPrice = basePrice + car.horsepower
+
+            if (currentWeather.wind.speed > 10.00) {
+                rentalPrice + 100.99
                 rentalCarsOffers.add(RentalOffer(car, rentalPrice))
             } else {
-                val rentalPrice = basePrice + currentWeather.wind.speed + currentWeather.main.temp * 2
                 rentalCarsOffers.add(RentalOffer(car, rentalPrice))
             }
         }
@@ -110,5 +100,12 @@ class RentalOffersFragment : Fragment(R.layout.fragment_rental_offers) {
 
     private fun submitOffers(rentalOffers: List<RentalOffer>) {
         rentalOffersAdapter.submitOffers(rentalOffers)
+    }
+
+    //Displaying current weather conditions in UI elements
+    private fun displayWeatherConditions(currentWeather: WeatherResponse) {
+        rental_offers_current_location_txt.text = currentWeather.name
+        rental_offers_current_temperature_txt.text = currentWeather.main.temp.toString()
+        rental_offers_current_wind_txt.text = currentWeather.wind.speed.toString()
     }
 }

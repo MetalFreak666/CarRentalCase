@@ -16,21 +16,9 @@
             app:destination="@id/selectRentalCarColor" />
     </fragment>
     <fragment
-        android:id="@+id/rentalDetailFragment"
-        android:name="com.example.carrentalfinder.ui.fragments.RentalDetailFragment"
-        android:label="RentalDetailFragment" >
-        <argument
-            android:name="rentalOffer"
-            app:argType="com.example.carrentalfinder.data.models.RentalOffer" />
-    </fragment>
-    <fragment
         android:id="@+id/rentalOffersFragment"
         android:name="com.example.carrentalfinder.ui.fragments.RentalOffersFragment"
-        android:label="RentalOffersFragment" >
-        <action
-            android:id="@+id/action_rentalOffersFragment_to_rentalDetailFragment"
-            app:destination="@id/rentalDetailFragment" />
-    </fragment>
+        android:label="RentalOffersFragment" />
     <fragment
         android:id="@+id/myBookingsFragment"
         android:name="com.example.carrentalfinder.ui.fragments.MyBookingsFragment"
