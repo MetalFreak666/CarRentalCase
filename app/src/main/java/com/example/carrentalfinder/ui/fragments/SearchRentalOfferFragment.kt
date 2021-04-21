@@ -18,7 +18,7 @@ class SearchRentalOfferFragment : Fragment(R.layout.fragment_search_offer) {
 
 
         search_rental_add_brand.setOnClickListener {
-            findNavController().navigate(R.id.action_searchOffersFragment_to_selectBrandFragment)
+            findNavController().navigate(R.id.action_searchOffersFragment_to_selectRentalCarFragment)
         }
     }
 }

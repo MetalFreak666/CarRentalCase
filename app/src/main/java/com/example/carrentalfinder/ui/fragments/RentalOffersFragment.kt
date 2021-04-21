@@ -67,7 +67,7 @@ class RentalOffersFragment : Fragment(R.layout.fragment_rental_offers) {
         }
     }
 
-    //Getting cars from Json file
+    //Getting cars from JSON file in assets directory
     private fun getRentalCars() {
         val gson = Gson()
         val jsonFileString = getJsonDataFromAssets(this.requireContext(), "cars.json")
