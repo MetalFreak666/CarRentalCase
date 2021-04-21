@@ -3,6 +3,7 @@ package com.example.carrentalfinder.viewmodels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.carrentalfinder.data.models.Car
 import com.example.carrentalfinder.data.models.WeatherResponse
 import com.example.carrentalfinder.repositories.WeatherRepository
 import com.example.carrentalfinder.utils.Resource
@@ -13,8 +14,9 @@ import retrofit2.Response
  * ViewModel class for weather live data
  */
 class CarRentalViewModel(private val repository: WeatherRepository) : ViewModel() {
-    val currentWeather: MutableLiveData<Resource<WeatherResponse>> = MutableLiveData()
     private val city = "reykjavik"
+    val currentWeather: MutableLiveData<Resource<WeatherResponse>> = MutableLiveData()
+    val selectedRentalBrand = MutableLiveData<Car>()
 
     init {
         getCurrentWeather(city)
@@ -34,5 +36,10 @@ class CarRentalViewModel(private val repository: WeatherRepository) : ViewModel(
             }
         }
         return Resource.Error(response.message())
+    }
+
+
+    fun updateCar(car: Car) {
+        selectedRentalBrand.value = car
     }
 }

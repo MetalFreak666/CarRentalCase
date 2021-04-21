@@ -10,7 +10,7 @@
         android:id="@+id/recycler_rental_car_brand_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Car Brand:"
+        android:text="@string/recycler_rental_car_brand_txt"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -27,7 +27,7 @@
         android:id="@+id/recycler_rental_car_model_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Car Model:"
+        android:text="@string/recycler_rental_car_model_txt"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/recycler_rental_car_brand_txt"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -44,7 +44,7 @@
         android:id="@+id/recycler_rental_car_horsepower_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Engine Horsepower:"
+        android:text="@string/recycler_rental_horsepower_txt"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/recycler_rental_car_model_txt"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -61,7 +61,7 @@
         android:id="@+id/recycler_rental_car_weight_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Car Total Weight:"
+        android:text="@string/recycler_rental_car_weight_txt"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/recycler_rental_car_horsepower_txt"
         app:layout_constraintStart_toStartOf="parent"/>

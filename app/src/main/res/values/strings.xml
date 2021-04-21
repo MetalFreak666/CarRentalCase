@@ -28,12 +28,19 @@
 
     <!-- Search Rental Offer Fragment -->
     <string name="search_rental_brand_txt">Select Car</string>
-    <string name="search_rental_horsepower_txt">Engine Horsepower</string>
-    <string name="search_rental_weight_txt">Car Weight</string>
+    <string name="search_rental_horsepower_txt">Engine Horsepower :</string>
+    <string name="search_rental_weight_txt">Car Weight :</string>
     <string name="search_rental_date_txt">Select Rental Date</string>
     <string name="search_rental_content_description">Add Image</string>
+    <string name="search_rental_total_price">Total Price :</string>
 
     <!-- Select Rental Cars Fragment -->
     <string name="select_rental_car_txt">Select one of the available cars for rent</string>
+
+    <!-- Rental Car Recycler Item -->
+    <string name="recycler_rental_car_brand_txt">Car Brand :</string>
+    <string name="recycler_rental_car_model_txt">Car Model :</string>
+    <string name="recycler_rental_horsepower_txt">Engine Horsepower :</string>
+    <string name="recycler_rental_car_weight_txt">Car Weight :</string>
 
 </resources>

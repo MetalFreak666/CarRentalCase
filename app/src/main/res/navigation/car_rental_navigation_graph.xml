@@ -35,5 +35,9 @@
     <fragment
         android:id="@+id/selectRentalCarFragment"
         android:name="com.example.carrentalfinder.ui.fragments.SelectRentalCarFragment"
-        android:label="SelectRentalCarFragment" />
+        android:label="SelectRentalCarFragment" >
+        <action
+            android:id="@+id/action_selectRentalCarFragment_to_searchOffersFragment"
+            app:destination="@id/searchOffersFragment" />
+    </fragment>
 </navigation>

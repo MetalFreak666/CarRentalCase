@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carrentalfinder.R
 import com.example.carrentalfinder.data.models.Car
+import com.example.carrentalfinder.data.models.RentalOffer
 import kotlinx.android.synthetic.main.recycler_item_rental_car.view.*
 
 /**
@@ -14,6 +15,7 @@ import kotlinx.android.synthetic.main.recycler_item_rental_car.view.*
 class RentalCarsAdapter() : RecyclerView.Adapter<RentalCarsAdapter.RentalCarsViewHolder>() {
 
     private var rentalCars: List<Car> = ArrayList()
+    private var onItemClickListener: ((Car) -> Unit)? = null
 
     inner class RentalCarsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
@@ -24,11 +26,16 @@ class RentalCarsAdapter() : RecyclerView.Adapter<RentalCarsAdapter.RentalCarsVie
     override fun onBindViewHolder(holder: RentalCarsViewHolder, position: Int) {
         val rentalCar = rentalCars[position]
 
+        //Binding rental car data to the ItemView
         holder.itemView.apply {
             recycler_rental_car_brand_current.text = rentalCar.brand.toUpperCase()
             recycler_rental_car_model_current.text = rentalCar.model.toUpperCase()
             recycler_rental_car_horsepower_current.text = rentalCar.horsepower.toString()
             recycler_rental_car_weight_current.text = rentalCar.weight.toString()
+
+            setOnClickListener{
+                onItemClickListener?.let { it(rentalCar) }
+            }
         }
     }
 
@@ -42,4 +49,8 @@ class RentalCarsAdapter() : RecyclerView.Adapter<RentalCarsAdapter.RentalCarsVie
         notifyDataSetChanged()
     }
 
+    //Called when user selected rental car
+    fun setOnClickListener(listener: (Car) -> Unit) {
+        onItemClickListener = listener
+    }
 }

@@ -25,6 +25,7 @@ class RentalOffersAdapter() : RecyclerView.Adapter<RentalOffersAdapter.RentalOff
     override fun onBindViewHolder(holder: RentalOffersViewHolder, position: Int) {
         val rentalOffer = rentalOffers[position]
 
+        //Binding rental offer data to the ItemView
         holder.itemView.apply {
             recycler_car_brand_txt.text = rentalOffer.car.brand.toUpperCase()
             recycler_car_model_txt.text = rentalOffer.car.model.toUpperCase()
